@@ -1,5 +1,5 @@
 .idea/
 .composer.cache/
 .vscode/
-.env
+/.env
 .DS_Store
