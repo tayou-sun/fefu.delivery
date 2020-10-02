@@ -3,5 +3,5 @@
 .vscode/
 /.env
 .DS_Store
-/src/.preload.php
-/config/preload.php
+/api/src/.preload.php
+/api/config/preload.php
