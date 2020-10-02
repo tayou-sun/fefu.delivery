@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# shellcheck disable=SC2046
+$(dirname "$0")/docker-compose exec fefu-delivery-mysql mysql "$@"

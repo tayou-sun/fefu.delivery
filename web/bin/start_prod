@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BIN_PATH=$(dirname "$0")
+
+# shellcheck disable=SC2046
+"$BIN_PATH"/up
+
+"$BIN_PATH"/composer install --optimize-autoloader
+"$BIN_PATH"/composer dump-autoload --classmap-authoritative --optimize
+"$BIN_PATH"/composer dump-env prod
+"$BIN_PATH"/console cache:clear --env=prod
+"$BIN_PATH"/console cache:warmup --env=prod

@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  fefu-delivery-mysql:
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+
+  fefu-delivery-php-fpm:
+    environment:
+      XDEBUG_CONFIG: "${PHP_XDEBUG_CONFIG}"
+      PHP_IDE_CONFIG: "serverName=${NGINX_HOST}"
