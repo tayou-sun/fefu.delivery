@@ -3,7 +3,7 @@ server {
 
     server_name '$NGINX_HOST';
 
-    root /app/public;
+    root /app/api/public;
 
     location / {
         # try to serve file directly, fallback to index.php

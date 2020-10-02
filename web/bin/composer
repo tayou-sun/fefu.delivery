@@ -4,4 +4,4 @@
 CURRENT_USER=$(id -u $(whoami))
 
 # shellcheck disable=SC2046
-$(dirname "$0")/docker-compose run --user="${CURRENT_USER}" --rm --no-deps -e COMPOSER_HOME=/app/.composer.cache fefu-delivery-php-fpm /bin/composer --working-dir=. "$@"
+$(dirname "$0")/docker-compose run --user="${CURRENT_USER}" --rm --no-deps -e COMPOSER_HOME=/app/.composer.cache fefu-delivery-php-fpm /bin/composer --working-dir=api "$@"

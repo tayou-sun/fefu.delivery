@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # shellcheck disable=SC2046
-$(dirname "$0")/docker-compose run --user="${CURRENT_USER}" --rm --no-deps fefu-delivery-php-fpm php bin/console "$@"
+$(dirname "$0")/docker-compose run --user="${CURRENT_USER}" --rm --no-deps fefu-delivery-php-fpm php api/bin/console "$@"
